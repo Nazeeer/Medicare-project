@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <a href="#" class="up text-white" id="up">up</a>
+    
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  <script>
+    const scrollup = ()=>{
+      let up =document.getElementById("up");
+      window.scrollY >=350 ? up.classList.add("show-scroll"):
+      up.classList.remove("show-scroll")
+  }
+  
+  window.addEventListener('scroll', scrollup)
+  </script>
+</html>
